@@ -5,15 +5,16 @@ public class Bruteforce {
     public static int HaufgisterBustabeInDeutsch = 4;
     public static void main(String[] args) {
 
-        int vermuteteSchlussellange = 6;
-        String chiffetext = "rfafgjnvbslnffwhsazdjzfysonfvvwamljdmyxwencgjnvbs";//"wtlfpqktzbgdxwjswcrfxwjrlcyladajwhraeszqvlqakhawsspfccozepyoqfrh.nfupxxlwbquqhxuctaipbdlaiuqjkdkgighxq.yfbawjplktfgeohyplaxhsijdywuubtzwsfhvoblyeaeszqwtlfpyohjnfmjhbiwwrfpqktzbgdxwjswcrfxwjrlcyeupjtztdgghcvodyqes";
+        int vermuteteSchlussellange = 14;
+        String chiffetext = "wtlfpqktzbgdxwjswcrfxwjrlcyladajwhraeszqvlqakhawsspfccozepyoqfrh.nfupxxlwbquqhxuctaipbdlaiuqjkdkgighxq.yfbawjplktfgeohyplaxhsijdywuubtzwsfhvoblyeaeszqwtlfpyohjnfmjhbiwwrfpqktzbgdxwjswcrfxwjrlcyeupjtztdgghcvodyqes";
         char[] chiffretextChar = chiffetext.toCharArray();
         char[][] chiffreaufgespalten = new char[vermuteteSchlussellange][217];
+        dechiffrieren(chiffetext, 13);
 
-        for (int i = 1; i <= vermuteteSchlussellange; i++) {
+        /*for (int i = 13; i <= vermuteteSchlussellange; i++) {
             System.out.println("Versuch mit einer Vermuteten Schlüssellänge von: "+i+" Zeichen!");
             dechiffrieren(chiffetext, i);
-        }
+        }*/
     }
 
     public static void dechiffrieren (String chiffre, int schlusselLange)
@@ -91,14 +92,14 @@ public class Bruteforce {
             }
 
         }
-        //System.out.println("Nächste Reihe: ");
-        //System.out.println("Der Bustabe: "+intToChar(hochsteZahl1)+ " wurde am häufigsten getippt!");
-        //System.out.println("Der Bustabe: "+ intToChar(hochsteZahl2)+" wurde am zweithäufgisten verwendet!");
-        // ab hier gilt es nur noch für die Schlüsselwortlänge eins.
-        //System.out.println("Ein Möglicher Versuch lautet: ");
+        System.out.println("Nächste Reihe: ");
+        System.out.println("Der Bustabe: "+intToChar(hochsteZahl1)+ " wurde am häufigsten getippt!");
+        System.out.println("Der Bustabe: "+ intToChar(hochsteZahl2)+" wurde am zweithäufgisten verwendet!");
+
+        System.out.println("Ein Möglicher Versuch lautet: ");
         for (int i = 0; i < chiffre.length; i++) {
             char c = intToChar(enc(charToInt(chiffre[i]), berechneVerschiebung(hochsteZahl1)));
-            //System.out.print(c);
+            System.out.print(c);
             ErgebnisChar[ErgebnisCharZaehler] = c;
             ErgebnisCharZaehler++;
 

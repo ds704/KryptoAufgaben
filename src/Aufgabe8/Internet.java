@@ -115,6 +115,7 @@ public class Internet extends Thread{
                                     }
                                     char[] keyChar = key.toCharArray();
                                     char[] decrypted = crypt(plain, keyChar, 0);
+                                   // decrypted = "hallokryptoajsdf".toCharArray();
                                     for (int p = 0; p < decrypted.length-4; p++) {
                                         if (decrypted[p] == 'k' && decrypted[p+1] == 'r' && decrypted[p+2] == 'y' && decrypted[p+3] == 'p' && decrypted[p+4] == 't') {
                                             System.out.println("Entschluesselter Text:");

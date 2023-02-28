@@ -1,9 +1,10 @@
-public class Koinzidenzindex {
+package Aufgabe8;
+
+public class ZahleHuafigkeit {
     public static void main(String[] args) {
-            //String chiffetext = "wtlfpqktzbgdxwjswcrfxwjrlcyladajwhraeszqvlqakhawsspfccozepyoqfrh.nfupxxlwbquqhxuctaipbdlaiuqjkdkgighxq.yfbawjplktfgeohyplaxhsijdywuubtzwsfhvoblyeaeszqwtlfpyohjnfmjhbiwwrfpqktzbgdxwjswcrfxwjrlcyeupjtztdgghcvodyqes";
         String chiffetext =  "eegykvfynpcgwnexgh";
         char[] chiffretextChar = chiffetext.toCharArray();
-            int[] haufigkeit = new int[28];
+        int[] haufigkeit = new int[28];
         for (int i = 0; i < haufigkeit.length; i++) {
             haufigkeit[i] = 0;
 
@@ -99,19 +100,73 @@ public class Koinzidenzindex {
 
 
         }
-        double ergebnis = 0;
-        double zwischenergebnis;
-        for (int j = 1; j < haufigkeit.length; j++) {
-
-
-            zwischenergebnis = (haufigkeit[j] * haufigkeit[j])/ 212.0;
-
-            System.out.println("                  "+haufigkeit[j]);
-            System.out.println(zwischenergebnis);
-            ergebnis = ergebnis + zwischenergebnis;
+        for (int i = 1; i < haufigkeit.length; i++) {
+            System.out.println("Der Bustabe: "+intToChar(i)+" kam "+ haufigkeit[i]+" mal vor!");
 
         }
-        System.out.println("Der Koinzidenzfaktor liegt bei: "+ergebnis);
-        System.out.println(chiffretextChar.length);
     }
-}
+    public static char intToChar(int zahlenwert)
+    {
+        switch (zahlenwert) {
+            case 1:
+                return 'a';
+            case 2:
+                return 'b';
+            case 3:
+                return 'c';
+            case 4:
+                return 'd';
+            case 5:
+                return 'e';
+            case 6:
+                return 'f';
+            case 7:
+                return 'g';
+            case 8:
+                return 'h';
+            case 9:
+                return 'i';
+            case 10:
+                return 'j';
+            case 11:
+                return 'k';
+            case 12:
+                return 'l';
+            case 13:
+                return 'm';
+            case 14:
+                return 'n';
+            case 15:
+                return 'o';
+            case 16:
+                return 'p';
+            case 17:
+                return 'q';
+            case 18:
+                return 'r';
+            case 19:
+                return 's';
+            case 20:
+                return 't';
+            case 21:
+                return 'u';
+            case 22:
+                return 'v';
+            case 23:
+                return 'w';
+            case 24:
+                return 'x';
+            case 25:
+                return 'y';
+            case 26:
+                return 'z';
+            case 27:
+                return '.';
+            default:
+                return '-';
+
+        }
+    }
+    }
+
+
