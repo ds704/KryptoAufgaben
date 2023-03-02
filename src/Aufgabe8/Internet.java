@@ -84,38 +84,38 @@ public class Internet extends Thread{
             if(i>0) {
                 key = key+alphabet[i - 1];
             }
-            for (int j = 0; j < 28; j++) {
+            for (int j = 1; j < 28; j++) {
                 System.out.println("Thread nr. " + id+" ist bei Nr.: "+j);
-                if(j>0) {
+
                     key = key+alphabet[j- 1];
-                }
-                for (int k = 0; k < 28; k++) {
-                    if(k>0) {
+
+                for (int k = 1; k < 28; k++) {
+
                         key = key+alphabet[k - 1];
-                    }
-                    for (int k1 = 0; k1 < 28; k1++) {
-                        if(k1>0) {
+
+                    for (int k1 = 1; k1 < 28; k1++) {
+
                             key = key+alphabet[k1 - 1];
-                        }
-                    for (int l = 0; l < 28; l++) {
-                        if(l>0) {
+
+                    for (int l = 1; l < 28; l++) {
+
                             key = key+alphabet[l - 1];
-                        }
-                        for (int m = 0; m < 28; m++) {
-                            if(m>0) {
+
+                        for (int m = 1; m < 28; m++) {
+
                                 key = key+alphabet[m - 1];
-                            }
-                            for (int n = 0; n < 28; n++) {
-                                if (n > 0) {
+
+                            for (int n = 1; n < 28; n++) {
+
                                     key = key + alphabet[n - 1];
-                                }
-                                for (int o = 0; o < 28; o++) {
-                                    if (o > 0) {
+
+                                for (int o = 1; o < 28; o++) {
+
                                         key = key + alphabet[o - 1];
-                                    }
-                                    if (key == "") {
+
+                                    /*if (key == "") {
                                         key = "a";
-                                    }
+                                    }*/
                                     char[] keyChar = key.toCharArray();
                                     char[] decrypted = crypt(plain, keyChar, 0);
                                     // decrypted = "hallokryptoajsdf".toCharArray();
