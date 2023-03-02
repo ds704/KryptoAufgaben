@@ -5,11 +5,11 @@ public class Bruteforce {
     public static int HaufgisterBustabeInDeutsch = 4;
     public static void main(String[] args) {
 
-        int vermuteteSchlussellange = 14;
-        String chiffetext = "wtlfpqktzbgdxwjswcrfxwjrlcyladajwhraeszqvlqakhawsspfccozepyoqfrh.nfupxxlwbquqhxuctaipbdlaiuqjkdkgighxq.yfbawjplktfgeohyplaxhsijdywuubtzwsfhvoblyeaeszqwtlfpyohjnfmjhbiwwrfpqktzbgdxwjswcrfxwjrlcyeupjtztdgghcvodyqes";
+        int vermuteteSchlussellange = 8;
+        String chiffetext = "abcdefghijklmnabcdefghijklmnabcdefghijklmnabcdefghijklmnabcdefghijklmnabcdefghijklmn";//"wtlfpqktzbgdxwjswcrfxwjrlcyladajwhraeszqvlqakhawsspfccozepyoqfrh.nfupxxlwbquqhxuctaipbdlaiuqjkdkgighxq.yfbawjplktfgeohyplaxhsijdywuubtzwsfhvoblyeaeszqwtlfpyohjnfmjhbiwwrfpqktzbgdxwjswcrfxwjrlcyeupjtztdgghcvodyqes";
         char[] chiffretextChar = chiffetext.toCharArray();
         char[][] chiffreaufgespalten = new char[vermuteteSchlussellange][217];
-        dechiffrieren(chiffetext, 13);
+        dechiffrieren(chiffetext, 8);
 
         /*for (int i = 13; i <= vermuteteSchlussellange; i++) {
             System.out.println("Versuch mit einer Vermuteten Schlüssellänge von: "+i+" Zeichen!");
@@ -127,7 +127,7 @@ public class Bruteforce {
             ergebnis = ergebnis + 26;
         }
 
-        return ergebnis;
+        return chiffre;//ergebnis;
     }
     public static int charToInt(char c)
     {

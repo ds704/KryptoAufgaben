@@ -2,7 +2,7 @@ package Aufgabe8;
 
 public class ZahleHuafigkeit {
     public static void main(String[] args) {
-        String chiffetext =  "eegykvfynpcgwnexgh";
+        String chiffetext =  "hctevimfiepngygdw";
         char[] chiffretextChar = chiffetext.toCharArray();
         int[] haufigkeit = new int[28];
         for (int i = 0; i < haufigkeit.length; i++) {

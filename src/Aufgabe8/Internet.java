@@ -93,6 +93,10 @@ public class Internet extends Thread{
                     if(k>0) {
                         key = key+alphabet[k - 1];
                     }
+                    for (int k1 = 0; k1 < 28; k1++) {
+                        if(k1>0) {
+                            key = key+alphabet[k1 - 1];
+                        }
                     for (int l = 0; l < 28; l++) {
                         if(l>0) {
                             key = key+alphabet[l - 1];
@@ -102,22 +106,21 @@ public class Internet extends Thread{
                                 key = key+alphabet[m - 1];
                             }
                             for (int n = 0; n < 28; n++) {
-                                if(n>0) {
-                                    key = key+alphabet[n - 1];
+                                if (n > 0) {
+                                    key = key + alphabet[n - 1];
                                 }
                                 for (int o = 0; o < 28; o++) {
-                                    if(o>0) {
-                                        key = key+alphabet[o - 1];
+                                    if (o > 0) {
+                                        key = key + alphabet[o - 1];
                                     }
-                                    if(key == "")
-                                    {
+                                    if (key == "") {
                                         key = "a";
                                     }
                                     char[] keyChar = key.toCharArray();
                                     char[] decrypted = crypt(plain, keyChar, 0);
-                                   // decrypted = "hallokryptoajsdf".toCharArray();
-                                    for (int p = 0; p < decrypted.length-4; p++) {
-                                        if (decrypted[p] == 'k' && decrypted[p+1] == 'r' && decrypted[p+2] == 'y' && decrypted[p+3] == 'p' && decrypted[p+4] == 't') {
+                                    // decrypted = "hallokryptoajsdf".toCharArray();
+                                    for (int p = 0; p < decrypted.length - 4; p++) {
+                                        if (decrypted[p] == 'e' & decrypted[p + 1] == 'i' & decrypted[p + 2] == 'n' & decrypted[p + 3] == 'e') {// && decrypted[p+4] == 't') {
                                             System.out.println("Entschluesselter Text:");
                                             System.out.println(decrypted);
                                         }
@@ -125,6 +128,7 @@ public class Internet extends Thread{
                                     key = "";
 
                                 }
+                            }
 
                             }
                         }
